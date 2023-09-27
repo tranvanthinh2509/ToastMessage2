@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ccc;
+}
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 1;
+}
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    transition: all linear 0.3s;
+    
+}
+@keyframes slideLeft {
+    from {
+        opacity: 0.3;
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+.toast-success {
+    color: #47d864;
+    border-color: #47d864;
+}
+.toast-oke {
+    color: purple;
+    border-color: purple;
+}
+.toast-error {
+    color: red;
+    border-color: red;
+}
+.toast-warning {
+    color: orange;
+    border-color: orange;
+}
+.toast-success {
+    color: #47d864;
+    border-color: #47d864;
+}
+.toast:nth-child(1) {
+    margin-top: 0 !important;
+}
+.toast {
+    margin-top: 20px;
+}
+.toast-icon,
+.toast-close {
+    font-size: 24px;
+    padding: 0 16px;
+
+}
+.toast-body {
+    flex-grow: 1;
+}
+.toast-title {
+    font-size: 16px;
+    color: #333;
+}
+.toast-info {
+    margin-top: 6px;
+    line-height: 1.5;
+    color: #888;
+    font-size: 14px;
+}
+.toast-close {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.btn {
+    width:200px;
+    padding: 20px;
+    border-radius: 40px;
+    text-align: center;
+    color: #fff;
+}
+.btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+.btn--success {
+    background-color: green;
+}
+.btn--error {
+    background-color: red;
+    margin-left: 20px;
+}
